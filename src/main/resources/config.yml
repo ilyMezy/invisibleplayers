@@ -1,0 +1,30 @@
+# =====================================================================
+# InvisiblePlayers configuration
+#
+# This file is created automatically on first startup and is never
+# overwritten by later plugin updates unless you delete it.
+# =====================================================================
+
+# Tab-list visibility feature.
+# When enabled, players affected by the INVISIBILITY potion effect are
+# hidden from the tab/player list of every OTHER online player. This
+# only affects the tab list; it never touches entity visibility,
+# nametags, collision, or targeting.
+tab-list:
+  enabled: true
+
+# Death-message redaction feature.
+# When enabled, if a player is killed by another player who currently
+# has the INVISIBILITY potion effect, the killer's identity in the
+# public death message is replaced with the configured "replacement"
+# text. The victim and death context (weapon, cause) are preserved.
+death-redaction:
+  enabled: true
+  replacement: "?"
+
+# General plugin settings.
+settings:
+  # How often (in seconds) the plugin re-checks all online players'
+  # invisibility state as a safety-net reconciliation pass, in addition
+  # to its normal event-driven updates. Must be a positive integer.
+  reconciliation-interval: 1

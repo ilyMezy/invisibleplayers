@@ -1,0 +1,28 @@
+name: InvisiblePlayers
+version: '${version}'
+main: com.mezy.invisibleplayers.InvisiblePlayersPlugin
+api-version: '26.1.2'
+description: Hides invisible players from other players' tab lists and redacts invisible killers in death messages.
+author: mezy
+website: https://github.com/ilymezy/InvisiblePlayers
+softdepend: [DiscordSRV]
+
+commands:
+  invisibleplayers:
+    description: Manage the InvisiblePlayers plugin.
+    usage: /<command> [help|reload|status]
+    aliases: [ip]
+
+permissions:
+  invisibleplayers.admin:
+    description: Grants access to all InvisiblePlayers admin subcommands.
+    default: op
+    children:
+      invisibleplayers.reload: true
+      invisibleplayers.status: true
+  invisibleplayers.reload:
+    description: Allows reloading the InvisiblePlayers configuration.
+    default: op
+  invisibleplayers.status:
+    description: Allows viewing InvisiblePlayers status information.
+    default: op
